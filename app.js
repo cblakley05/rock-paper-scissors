@@ -6,6 +6,7 @@ const paperBtn = document.querySelector("#paper");
 const scissorsBtn = document.querySelector("#scissors");
 const usrScoreDisplay = document.querySelector("#usrScoreDisplay");
 const compScoreDisplay = document.querySelector("#compScoreDisplay");
+const textResults = document.querySelector("#textResults");
 let usrValue;
 let compValue;
 let gameResult;
@@ -24,17 +25,13 @@ rockBtn.addEventListener('click', () => {
 paperBtn.addEventListener('click', () => {
     usrValue = parseInt(paperBtn.value);
     compValue = computerThrow();
-    console.log(usrValue, compValue);
     checkGame();
-    console.log(gameResult);
 })
 
 scissorsBtn.addEventListener('click', () => {
     usrValue = parseInt(scissorsBtn.value);
     compValue = computerThrow();
-    console.log(usrValue, compValue);
     checkGame();
-    console.log(gameResult);
 })
 
 
@@ -46,16 +43,36 @@ const computerThrow = () => {
 
 const checkGame = () => {
     if (usrValue === compValue) {
-        gameResult = "Tie"
-    } else if (
-        (usrValue === 0 && compValue === 1) ||
-        (usrValue === 1 && compValue === 2) ||
-        (usrValue === 2 && compValue === 0)) {
-        gameResult = "You Lose..."
+        gameResult = "Tie!"
+        textResults.textContent = gameResult;
+    } else if (usrValue === 0 && compValue === 1) {
+        gameResult = "Paper covers Rock! You lose...";
+        textResults.textContent = gameResult;
         compScore++;
         compScoreDisplay.textContent = compScore;
+    } else if (usrValue === 1 && compValue === 2) {
+        gameResult = ("Scissors cut Paper! You lose...")
+        textResults.textContent = gameResult;
+        compScore++;
+        compScoreDisplay.textContent = compScore;
+    } else if (usrValue === 2 && compValue === 0) {
+        gameResult = "Rock breaks Scissors! You Lose..."
+        textResults.textContent = gameResult;
+        compScore++;
+        compScoreDisplay.textContent = compScore;
+    } else if (usrValue === 0 && compValue === 2) {
+        gameResult = "Rock breaks Scissors! You win!"
+        textResults.textContent = gameResult;
+        usrScore++;
+        usrScoreDisplay.textContent = usrScore;
+    } else if (usrValue === 1 && compValue === 0) {
+        gameResult = "Paper covers Rock! You win!";
+        textResults.textContent = gameResult;
+        usrScore++;
+        usrScoreDisplay.textContent = usrScore;
     } else {
-        gameResult = "You Win!"
+        gameResult = "Scissors cut Paper! You win!"
+        textResults.textContent = gameResult;
         usrScore++;
         usrScoreDisplay.textContent = usrScore;
     }
