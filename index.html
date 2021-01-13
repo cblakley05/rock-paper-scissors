@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Potta+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Potta+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +14,18 @@
     <main id="main">
         <h1>Rock Paper Scissors</h1>
 
-        <div class="score-display">
+        <div class="game-display">
+            <div class="scoreboard">
+                <div class="scorecard">
+                    <p>You</p>
+                    <p id="usrScoreDisplay" class="score">0</p>
+                </div>
+                <div class="rule"></div>
+                <div class="scorecard">
+                    <p>Computer</p>
+                    <p id="compScoreDisplay" class="score">0</p>
+                </div>
+            </div>
             <!-- Add scoreboard -->
             <!-- Add card/badge element to display player and computer throws -->
             <!-- Allow cards to overlap on small screens so winner is on top -->

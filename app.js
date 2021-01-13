@@ -4,9 +4,13 @@
 const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorsBtn = document.querySelector("#scissors");
+const usrScoreDisplay = document.querySelector("#usrScoreDisplay");
+const compScoreDisplay = document.querySelector("#compScoreDisplay");
 let usrValue;
 let compValue;
 let gameResult;
+let usrScore = 0;
+let compScore = 0;
 
 // Listeners
 rockBtn.addEventListener('click', () => {
@@ -48,7 +52,11 @@ const checkGame = () => {
         (usrValue === 1 && compValue === 2) ||
         (usrValue === 2 && compValue === 0)) {
         gameResult = "You Lose..."
+        compScore++;
+        compScoreDisplay.textContent = compScore;
     } else {
         gameResult = "You Win!"
+        usrScore++;
+        usrScoreDisplay.textContent = usrScore;
     }
 }
