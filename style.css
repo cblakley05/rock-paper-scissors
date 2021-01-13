@@ -1,11 +1,10 @@
-/* 
-Fonts
-font-family: 'Potta One', cursive;
-font-family: 'Poppins', sans-serif;
-*/
+* {
+    box-sizing: border-box;
+}
 
 html, body {
-    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
     background-color: #14213D;
 }
@@ -20,7 +19,7 @@ html, body {
 
 h1 {
     width: 100%;
-    margin: 1rem 0;
+    margin: 2rem auto;
     padding: 0.2rem 1rem;
     align-self: flex-start;
     text-align: center;
@@ -55,11 +54,12 @@ h1 {
 }
 
 .scorecard {
-    width: 50%;
+    width: 48%;
     padding-top: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     font-size: 0.8rem;
     color: #14213D;
 }
@@ -69,12 +69,13 @@ h1 {
 }
 
 .score {
-    width: 2.5rem;
+    width: 5rem;
+    height: auto;
     text-align: center;
     background-color: #FFF;
-    padding: 20px;
+    padding: 0.5rem;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .rule {
@@ -89,7 +90,7 @@ h1 {
 
 .btn-container {
     width: 100%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     display: flex;
     justify-content: center;
 }
