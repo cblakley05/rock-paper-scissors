@@ -1,0 +1,61 @@
+/* 
+Fonts
+font-family: 'Potta One', cursive;
+font-family: 'Poppins', sans-serif;
+*/
+
+html, body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #14213D;
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    width: 100%;
+    margin: 1rem 0;
+    align-self: flex-start;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+}
+
+.score-display {
+    width: 100%;
+    background-color: #E5E5E5;
+    flex: 1;
+}
+
+.btn-container {
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.usr-btn {
+    width: 6em;
+    height: 6em;
+    background-color: #FFF;
+    color: #000;
+    border: 5px solid #FCA311;
+    border-radius: 50%;
+}
+
+.usr-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px #FFF;
+}
+
+.btn-img {
+    width: 80%;
+    height: auto;
+}
